@@ -11,8 +11,8 @@ user "atlas" do
 end
 
 python_virtualenv "/opt/atlas" do
-  owner "ubuntu"
-  group "ubuntu"
+  owner "atlas"
+  group "atlas"
   action :create
   interpreter "python3.4"
 end
