@@ -2,6 +2,14 @@
 include_recipe "python"
 
 # create the python environment - virtualenv
+
+user "atlas" do
+  system true
+  home "/home/atlas/"
+  supports :manage_home => true
+  action :create
+end
+
 python_virtualenv "/opt/atlas" do
   owner "ubuntu"
   group "ubuntu"
