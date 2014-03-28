@@ -5,12 +5,12 @@ include_recipe "python"
 
 user "atlas" do
   system true
-  home "/home/atlas/"
-  supports :manage_home => true
   action :create
+  shell "/bin/bash"
 end
 
-python_virtualenv "/opt/atlas" do
+python_virtualenv "atlas" do
+  path "/opt/atlas/"
   owner "atlas"
   group "atlas"
   action :create
